@@ -14,5 +14,13 @@ jobs:
              node -v
              cat /etc/os-release  
 
+         - name: Install power kit
+           id : powerkit
+           run : echo 'y' | sfdx plugins:install sfpowerkit
+
+         - name: sfdx
+           run : sfdx --version
+
+
 # Allows you to run this workflow manually from the Actions tab
 
