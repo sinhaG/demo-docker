@@ -6,10 +6,11 @@ jobs:
   node-docker:
     runs-on: ubuntu-latest
     container:
-      image: node:14.15.0-alpine3.12
+      image: salestrip/sfdx-cli:latest
     steps:
          - name: Log the node version
            run: |
+             sfdx --version
              node -v
              cat /etc/os-release  
 
